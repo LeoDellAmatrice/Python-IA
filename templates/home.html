@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img class="gear" src="{{ url_for('static', filename='img/eng_vermelha.svg')}}" alt="Engrenagem vermelha">
+            <h2>Chatbot - MacLabs</h2>
+            <img class="gear" src="{{ url_for('static', filename='img/eng_amarela.svg')}}" alt="Engrenagem amarela">
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="message bot">
+                <span>Olá! Como posso ajudar você hoje?</span>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Digite sua mensagem e aperte [Enter]"
+                autocomplete="off"
+                onkeypress="checkEnter(event)">
+        </div>
+    </div>
+
+</body>
+</html>
